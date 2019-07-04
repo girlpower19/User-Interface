@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link , withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
-
 import { withFirebase } from '../Firebase';
 import { FirebaseContext } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
@@ -121,14 +119,15 @@ const INITIAL_STATE = {
         <MDBRow>
           <br />
           <div class="d-flex justify-content-center"></div>
-          <MDBCol md="5">
+          <MDBCol md="7">
               <img src={sideImg} alt="" className="bg" />
             </MDBCol>
-            <MDBCol md="4">
-        <form onSubmit={this.onSubmit} >
+            <MDBCol md="5">
+			
+        <form onSubmit={this.onSubmit} style={{marginTop:"9%"}}>
         <div className="logo">
                   <img src={logo} alt="" className="logo" />
-                </div>
+        </div>
         <p className="h2 text-center mb-6">Sign Up</p>
        <div >
         <MDBInput
@@ -170,14 +169,12 @@ const INITIAL_STATE = {
           />
          
             <MDBInput
-              // alignitems="center"
-              // display="flex"
-              // justify-item="center"
+              
               label="Admin"
               name="isAdmin"
               type="checkbox"
               checked={isAdmin}
-              filled
+              
               onChange={this.onChangeCheckbox}
               
             />
