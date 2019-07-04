@@ -1,0 +1,17 @@
+.bg {
+  height: 90vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo {
+  /* display: flex */
+  height: 45%;
+  width: 45%;
+  border-radius: 70%;
+  border-image: 10%;
+  color: black;
+  /* justify-content: center; */
+  margin-left: 50%;
+}
