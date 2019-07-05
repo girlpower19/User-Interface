@@ -9,7 +9,9 @@ import {
   MDBRow,
   MDBCol,
   MDBInput,
-  MDBBtn
+  MDBBtn,
+  MDBCard,
+  MDBCardBody
 } from "mdbreact";
 
 const INITIAL_STATE = {
@@ -49,22 +51,26 @@ class PasswordChangeForm extends Component {
 
     const isInvalid =
       passwordOne !== passwordTwo || passwordOne === '';
-      const sideImg = require("./download.jpg");
+      const sideImg = require("./w1.jpg");
         const logo = require("./w4.png");
 
     return (
-      <MDBContainer style={{alignitems:'center'}}>
+      <div>
+         <MDBContainer className="mobilepage">
       <MDBRow>
         <br />
         <div class="d-flex justify-content-center"></div>
-        <MDBCol md="5">
-            <img src={sideImg} alt="" className="bg" />
-          </MDBCol>
-          <MDBCol md="4">
-      <form onSubmit={this.onSubmit}>
+        
+          <MDBCol>
+            <MDBCard>
+              <MDBCardBody>
+      <form onSubmit={this.onSubmit} style={{marginTop:"25%"}}>
       <div className="logo">
                   <img src={logo} alt="" className="logo" />
                 </div>
+                <br/>
+                <p className="h4 text-center mb-6  ">Change Password</p>
+
         <MDBInput
           name="passwordOne"
           value={passwordOne}
@@ -81,15 +87,60 @@ class PasswordChangeForm extends Component {
           label="Confirm new password"
           placeholder="Confirm New Password"
         />
-        <MDBBtn disabled={isInvalid} type="submit">
+        <center>
+        <MDBBtn disabled={isInvalid} type="submit" color="light-blue" className="mb-3 blue-gradient">
           Reset My Password
         </MDBBtn>
-
         {error && <p>{error.message}</p>}
+        </center>
       </form>
+      </MDBCardBody>
+      </MDBCard>
       </MDBCol>
       </MDBRow>
     </MDBContainer>
+      <MDBContainer className="webpage">
+      <MDBRow>
+        <br />
+        <div class="d-flex justify-content-center"></div>
+        <MDBCol md="6">
+            <img src={sideImg} alt="" className="bg" />
+          </MDBCol>
+          <MDBCol md="6">
+      <form onSubmit={this.onSubmit} style={{marginTop:"25%"}}>
+      <div className="logo">
+                  <img src={logo} alt="" className="logo" />
+                </div>
+                <br/>
+                <p className="h2 text-center mb-6  ">Change Password</p>
+
+        <MDBInput
+          name="passwordOne"
+          value={passwordOne}
+          onChange={this.onChange}
+          type="password"
+          label="New Password"
+          placeholder="New Password"
+        />
+        <MDBInput
+          name="passwordTwo"
+          value={passwordTwo}
+          onChange={this.onChange}
+          type="password"
+          label="Confirm new password"
+          placeholder="Confirm New Password"
+        />
+        <center>
+        <MDBBtn disabled={isInvalid} type="submit" color="light-blue" className="mb-3 blue-gradient">
+          Reset My Password
+        </MDBBtn>
+        {error && <p>{error.message}</p>}
+        </center>
+      </form>
+      </MDBCol>
+      </MDBRow>
+      </MDBContainer>
+      </div>
     );
   }
 }

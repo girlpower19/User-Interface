@@ -73,7 +73,6 @@ class SignInFormBase extends Component {
 
     return (
       <div>
-      <div style={{minHeight:"40%"}}></div>
       <div>
       <MDBContainer className="mobilepage">
       <MDBRow>

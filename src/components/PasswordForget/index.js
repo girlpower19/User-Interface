@@ -11,12 +11,14 @@ import {
   MDBRow,
   MDBCol,
   MDBInput,
-  MDBBtn
+  MDBBtn,
+  MDBCard,
+  MDBCardBody
 } from "mdbreact";
 
 const PasswordForgetPage = () => (
   <div>
-    <h1>PasswordForget</h1>
+    
     <PasswordForgetForm />
   </div>
 );
@@ -53,15 +55,26 @@ class PasswordForgetFormBase extends Component {
   };
 
   render() {
+    const sideImg = require("./w1.jpg");
+    const logo = require("./w4.png");
+
     const { email, error } = this.state;
 
     const isInvalid = email === '';
 
     return (
-      <MDBContainer style={{alignitems:'center'}}>
-      <MDBRow>
+      <div>
+        <MDBContainer style={{alignitems:'center'}} className="mobilepage">
+        <MDBCard>
+        <MDBCardBody>
+        <MDBRow>
+        <br />
         <MDBCol>
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} style={{marginTop:"25%"}}>
+      <div className="logo">
+                  <img src={logo} alt="" className="logo" />
+                </div>
+                <p className="h2 text-center mb-6  ">Forget Password</p>
         <MDBInput
           name="email"
           value={this.state.email}
@@ -70,10 +83,45 @@ class PasswordForgetFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
-
-        <MDBBtn disabled={isInvalid} type="submit">
+        <center>
+        <MDBBtn disabled={isInvalid} type="submit" color="light-blue" className="mb-3 blue-gradient">
           Forget Password
         </MDBBtn>
+        </center>
+        <br/>
+        <br/>
+        {error && <p>{error.message}</p>}
+      </form>
+      </MDBCol>
+      </MDBRow>
+        </MDBCardBody>
+        </MDBCard>
+      </MDBContainer>
+      <MDBContainer style={{alignitems:'center'}} className="webpage">
+      <MDBRow>
+      <br />
+            <MDBCol md="6">
+            <img src={sideImg} alt="" className="bg" />
+            </MDBCol>
+        <MDBCol md="6">
+      <form onSubmit={this.onSubmit} style={{marginTop:"25%"}}>
+      <div className="logo">
+                  <img src={logo} alt="" className="logo" />
+                </div>
+                <p className="h2 text-center mb-6  ">Forget Password</p>
+        <MDBInput
+          name="email"
+          value={this.state.email}
+          label="Enter your email..."
+          onChange={this.onChange}
+          type="text"
+          placeholder="Email Address"
+        />
+        <center>
+        <MDBBtn disabled={isInvalid} type="submit" color="light-blue" className="mb-3 blue-gradient">
+          Forget Password
+        </MDBBtn>
+        </center>
         <br/>
         <br/>
         {error && <p>{error.message}</p>}
@@ -81,6 +129,7 @@ class PasswordForgetFormBase extends Component {
       </MDBCol>
       </MDBRow>
       </MDBContainer>
+      </div>
     );
   }
 }
