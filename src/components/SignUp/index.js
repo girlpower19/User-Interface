@@ -5,6 +5,7 @@ import { withFirebase } from '../Firebase';
 import { FirebaseContext } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
+import {SignInLink} from '../SignIn';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
@@ -17,6 +18,8 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
+  MDBModalFooter,
+
 } from "mdbreact";
 
 const SignUpPage = () => (
@@ -165,13 +168,13 @@ const INITIAL_STATE = {
             onChange={this.onChange}
             type="password"
             placeholder="Confirm Password"
-            label="Your password"
+            label="Confirm password"
                 icon="lock"
           />
-         
+          <center>Are You Admin ??</center>
             <MDBInput
               
-              label="Admin"
+              
               name="isAdmin"
               type="checkbox"
               checked={isAdmin}
@@ -182,11 +185,16 @@ const INITIAL_STATE = {
         
           </div>
           <br/>
+          <br/>
           <div className="text-center">
               <MDBBtn color="primary" disabled={isInvalid} type="submit" >SignUp</MDBBtn>
             </div>
   
           {error && <p className="text-center">{error.message}</p>}
+          <br/>
+          <MDBModalFooter className="font-weight-light d-flex justify-content-center">
+          <p className="text-left">{<SignInLink/>}</p>
+          </MDBModalFooter>
         </form>
         </MDBCardBody>
         </MDBCard>
@@ -242,21 +250,20 @@ const INITIAL_STATE = {
             onChange={this.onChange}
             type="password"
             placeholder="Confirm Password"
-            label="Your password"
+            label="Confirm password"
                 icon="lock"
           />
-         
+         <center><b>Are You Admin ??</b></center>
             <MDBInput
               
-              label="Admin"
+              
               name="isAdmin"
               type="checkbox"
               checked={isAdmin}
-              
               onChange={this.onChangeCheckbox}
               
             />
-        
+        <br/>
           </div>
           <br/>
           <div className="text-center">
@@ -264,6 +271,13 @@ const INITIAL_STATE = {
             </div>
   
           {error && <p className="text-center">{error.message}</p>}
+         <br/>
+          <MDBModalFooter className="font-weight-light d-flex justify-content-center">
+          <div>
+                  
+                  <p className="text-left">{<SignInLink/>}</p>
+          </div>
+          </MDBModalFooter>
         </form>
           
         </MDBCol>

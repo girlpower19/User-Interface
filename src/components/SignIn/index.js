@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter,Link} from "react-router-dom";
 import { compose } from "recompose";
 import { PasswordForgetLink } from "../PasswordForget";
 import {SignUpLink} from '../SignUp';
@@ -118,7 +118,7 @@ class SignInFormBase extends Component {
               </div>
               <div>{error && <p>{error.message}</p>}</div>
               <p className="text-center">{<PasswordForgetLink />}</p>
-              <MDBModalFooter className="font-weight-light d-flex justify-content-flex-end">
+              <MDBModalFooter className="font-weight-light d-flex justify-content-flex-center">
                 <div>
                   
                   <p className="text-left">{<SignUpLink/>}</p>
@@ -177,7 +177,7 @@ class SignInFormBase extends Component {
                 </div>
                 <div>{error && <p>{error.message}</p>}</div>
                 <p className="text-center">{<PasswordForgetLink />}</p>
-                <MDBModalFooter className="font-weight-light d-flex justify-content-flex-end">
+                <MDBModalFooter className="font-weight-light d-flex justify-content-center">
                   <div>
                     
                     <p className="text-left">{<SignUpLink/>}</p>
@@ -192,7 +192,11 @@ class SignInFormBase extends Component {
     );
   }
 }
-
+const SignInLink = () => (
+  <p>
+    Already A Member ? <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+  </p>
+);
 const SignInForm = compose(
   withRouter,
   withFirebase
@@ -200,4 +204,4 @@ const SignInForm = compose(
 
 export default SignInPage;
 
-export { SignInForm };
+export { SignInForm,SignInLink };
