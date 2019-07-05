@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { PasswordForgetLink } from "../PasswordForget";
-
+import {SignUpLink} from '../SignUp';
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
-
+import "./index.css"
 //mdb
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -19,7 +19,9 @@ import {
   MDBCol,
   MDBInput,
   MDBModalFooter,
-  MDBBtn
+  MDBBtn,
+  MDBCard,
+  MDBCardBody
 } from "mdbreact";
 
 const SignInPage = () => (
@@ -70,19 +72,79 @@ class SignInFormBase extends Component {
     const logo = require("./w4.png");
 
     return (
-      <MDBContainer>
+      <div>
+      <div className="">
+      <MDBContainer className="mobilepage">
+      <MDBRow>
+      <br />
+         
+          <MDBCol md="6" >
+          <MDBCard>
+          <MDBCardBody>
+            <form onSubmit={this.onSubmit} style={{marginTop:"9%"}}>
+              <div className="logo">
+                <img src={logo} alt="" className="logo" />
+              </div>
+              <p className="h2 text-center mb-6  ">Sign-In</p>
+              <div>
+                <MDBInput
+                  name="email"
+                  value={email}
+                  onChange={this.onChange}
+                  type="text"
+                  label="Email Address"
+                  icon="envelope"
+                />
+
+                <MDBInput
+                  name="password"
+                  value={password}
+                  onChange={this.onChange}
+                  type="password"
+                  label="Password"
+                  icon="lock"
+                />
+              </div>
+
+              <div className="text-center mt-4">
+                <MDBBtn
+                  disabled={isInvalid}
+                  type="submit"
+                  color="light-blue"
+                  className="mb-3 blue-gradient"
+                >
+                  Sign In
+                </MDBBtn>
+              </div>
+              <div>{error && <p>{error.message}</p>}</div>
+              <p className="text-center">{<PasswordForgetLink />}</p>
+              <MDBModalFooter className="font-weight-light d-flex justify-content-flex-end">
+                <div>
+                  
+                  <p className="text-left">{<SignUpLink/>}</p>
+                </div>
+              </MDBModalFooter>
+            </form>
+            </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        
+      </MDBRow>
+    </MDBContainer>
+      </div>
+
+      <MDBContainer className="webpage">
         <MDBRow>
-          <br />
-          <div class="d-flex justify-content-center">
-            <MDBCol md="5">
+        <br />
+            <MDBCol md="6">
               <img src={sideImg} alt="" className="bg" />
             </MDBCol>
-            <MDBCol md="4">
-              <form onSubmit={this.onSubmit}>
+            <MDBCol md="6">
+              <form onSubmit={this.onSubmit} style={{marginTop:"9%"}}>
                 <div className="logo">
                   <img src={logo} alt="" className="logo" />
                 </div>
-                <p className="h2 text-center mb-6">SignIn</p>
+                <p className="h2 text-center mb-6  ">Sign-In</p>
                 <div>
                   <MDBInput
                     name="email"
@@ -114,18 +176,19 @@ class SignInFormBase extends Component {
                   </MDBBtn>
                 </div>
                 <div>{error && <p>{error.message}</p>}</div>
-
-                <MDBModalFooter className="font-weight-light d-flex justify-content-center">
+                <p className="text-center">{<PasswordForgetLink />}</p>
+                <MDBModalFooter className="font-weight-light d-flex justify-content-flex-end">
                   <div>
-                    <p></p>
-                    <p>{<PasswordForgetLink />}</p>
+                    
+                    <p className="text-left">{<SignUpLink/>}</p>
                   </div>
                 </MDBModalFooter>
               </form>
             </MDBCol>
-          </div>
+          
         </MDBRow>
       </MDBContainer>
+      </div>
     );
   }
 }

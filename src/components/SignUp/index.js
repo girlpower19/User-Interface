@@ -8,12 +8,15 @@ import * as ROLES from '../../constants/roles';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import  "./index.css";
 import {
   MDBContainer,
   MDBRow,
   MDBCol,
   MDBInput,
-  MDBBtn
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
 } from "mdbreact";
 
 const SignUpPage = () => (
@@ -115,20 +118,18 @@ const INITIAL_STATE = {
         const logo = require("./w4.png");
 
       return (
-        <MDBContainer>
+        <div>
+    <MDBContainer className="mobilepage w-100 ">
         <MDBRow>
-          <br />
-          <div class="d-flex justify-content-center"></div>
-          <MDBCol md="7">
-              <img src={sideImg} alt="" className="bg" />
-            </MDBCol>
-            <MDBCol md="5">
-			
+        <br/>
+        <MDBCol md="6" >
+        <MDBCard>
+        <MDBCardBody>
         <form onSubmit={this.onSubmit} style={{marginTop:"9%"}}>
         <div className="logo">
                   <img src={logo} alt="" className="logo" />
         </div>
-        <p className="h2 text-center mb-6">Sign Up</p>
+        <p className="h2 text-center mb-6">Sign-Up</p>
        <div >
         <MDBInput
             name="username"
@@ -178,25 +179,104 @@ const INITIAL_STATE = {
               onChange={this.onChangeCheckbox}
               
             />
-            
+        
           </div>
           <br/>
           <div className="text-center">
               <MDBBtn color="primary" disabled={isInvalid} type="submit" >SignUp</MDBBtn>
             </div>
   
-          {error && <p>{error.message}</p>}
+          {error && <p className="text-center">{error.message}</p>}
         </form>
+        </MDBCardBody>
+        </MDBCard>
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+   
+        <MDBContainer className="webpage">
+        <MDBRow>
+        <br/>
+          <MDBCol md="6">
+              <img src={sideImg} alt="" className="bg" />
+          </MDBCol>
+        <MDBCol md="6" >
+          
+        <form onSubmit={this.onSubmit} style={{marginTop:"9%"}}>
+        <div className="logo">
+                  <img src={logo} alt="" className="logo" />
+        </div>
+        <p className="h2 text-center mb-6">Sign-Up</p>
+       <div >
+        <MDBInput
+            name="username"
+            value={username}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Full Name"
+            label="Your name"
+            icon="user"
+          />
+          <MDBInput
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
+            label="Your email"
+                icon="envelope"
+            
+          />
+          <MDBInput
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+            label="Your password"
+                icon="lock"
+          />
+          <MDBInput
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Confirm Password"
+            label="Your password"
+                icon="lock"
+          />
+         
+            <MDBInput
+              
+              label="Admin"
+              name="isAdmin"
+              type="checkbox"
+              checked={isAdmin}
+              
+              onChange={this.onChangeCheckbox}
+              
+            />
+        
+          </div>
+          <br/>
+          <div className="text-center">
+              <MDBBtn color="primary" disabled={isInvalid} type="submit" >SignUp</MDBBtn>
+            </div>
+  
+          {error && <p className="text-center">{error.message}</p>}
+        </form>
+          
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+   </div>
       );
     }
   }
   
   const SignUpLink = () => (
     <p>
-      Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+      Not a Member ? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
     </p>
   );
   const SignUpForm = compose(

@@ -15,3 +15,19 @@
   /* justify-content: center; */
   margin-left: 50%;
 }
+.mobilepage
+{
+  display:none;
+  
+}
+@media only screen and (max-width: 600px) {
+  .webpage {
+     display: none;
+  }
+  .mobilepage
+  {
+    display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  }
+} 
