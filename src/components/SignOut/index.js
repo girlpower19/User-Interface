@@ -5,7 +5,7 @@ import * as ROUTES from '../../constants/routes';
 
 const SignOutButton=({firebase})=>(
   <div>
-    <Link style={{color:'white',textDecoration:'none',}} to={ROUTES.SIGN_IN} onClick={()=>{ firebase.doSignOut();alert("YoU ArE OuT");}}>
+    <Link to={ROUTES.SIGN_IN} onClick={()=>{ firebase.doSignOut();alert("YoU ArE OuT");}}>
     Sign Out
     </Link>
   </div>
