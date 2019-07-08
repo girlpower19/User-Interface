@@ -1,14 +1,14 @@
 import React from 'react';
 import {compose} from 'recompose';
 import { withAuthorization,withEmailVerification } from '../Session';
-
-const HomePage = () => (
-  <div>
-    <h1>Home Page</h1>
-    <p>The Home Page is accessible by every signed in user.</p>
-  </div>
-);
+class HomePage extends React.Component {
+  render()
+  {
+    return (
+     <h1>hey, This will be feed page.</h1>
+    );
+  }
+}
 
 const condition = authUser => !!authUser;
-
 export default compose(withEmailVerification,withAuthorization(condition))(HomePage);

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { AuthUserContext } from '../Session';
 import * as ROLES from '../../constants/roles';
 import SignOutButton from '../SignOut';
@@ -32,11 +32,12 @@ render()
   return(
     <MDBNavbar color="light-blue" dark expand="md" className="blue-gradient">
     <MDBNavbarToggler onClick={this.toggleCollapse} />
-    <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
     
     <MDBNavbarBrand>
-    <MDBNavLink to={ROUTES.LANDING}>Girl Power</MDBNavLink>
+    <MDBNavLink to={ROUTES.LANDING}>Girl_Power</MDBNavLink>
     </MDBNavbarBrand>
+    <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+
     <MDBNavbarNav right>
     <MDBNavItem>
            {/* <MDBNavLink to={ROUTES.ACCOUNT}>Profile</MDBNavLink>*/}
@@ -78,16 +79,17 @@ class NavigationNonAuth extends Component
     return(
       <MDBNavbar color="light-blue" dark expand="md" className="blue-gradient">
       <MDBNavbarToggler onClick={this.toggleCollapse} />
-      <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
       <MDBNavbarNav left>
       <MDBNavbarBrand>
-      <MDBNavLink to={ROUTES.LANDING}>Girl Power</MDBNavLink>
+      <Link to={ROUTES.LANDING}>Girl_Power</Link>
       </MDBNavbarBrand>
+
       </MDBNavbarNav>
-      
+      <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+
       <MDBNavbarNav right>
       <MDBNavItem>
-      <MDBDropdown>
+      <MDBDropdown dropleft>
         <MDBDropdownToggle nav caret>
           <MDBIcon icon="user" />
         </MDBDropdownToggle>

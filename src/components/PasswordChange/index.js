@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {compose} from 'recompose';
+import { withAuthorization} from '../Session';
 import { withFirebase } from '../Firebase';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -144,4 +145,5 @@ class PasswordChangeForm extends Component {
     );
   }
 }
-export  default withFirebase(PasswordChangeForm);
+const condition = authUser => !!authUser;
+export default compose(withFirebase,withAuthorization(condition))(PasswordChangeForm);

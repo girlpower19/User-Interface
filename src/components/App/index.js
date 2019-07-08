@@ -15,41 +15,28 @@ const  App=()=>(
   <div>
     <Router>
     <Switch>
-    <Route exact path={ROUTES.SIGN_UP} component={LoginContainer}/>
-    <Route exact path={ROUTES.SIGN_IN} component={LoginContainer}/>
-    <Route exact path={ROUTES.PASSWORD_FORGET} component={LoginContainer}/>
-    <Route exact path={ROUTES.PASSWORD_CHANGE} component={passwordChange} />
+    <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
+    <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
     <Route component={DefaultContainer}/>
     </Switch>
     </Router>
   </div>
  );
- const LoginContainer = () => (
-  <div>
-     <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
-    <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
-    <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
-    <Route exact path={ROUTES.PASSWORD_CHANGE} component={passwordChange} />
 
-  </div>
-)
 
 const DefaultContainer = () => (
-  <div>
-  
  
       <div>
      <Navigation/>
+     <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
+    <Route exact path={ROUTES.PASSWORD_CHANGE} component={passwordChange} />
       <Route
       exact
       path={ROUTES.LANDING}
       component={LandingPage}/>
-         <Route exact path={ROUTES.SIGN_UP} component={LoginContainer} />
-    <Route exact path={ROUTES.SIGN_IN} component={LoginContainer} />
-    <Route exact path={ROUTES.PASSWORD_FORGET} component={LoginContainer}/>
-    <Route exact path={ROUTES.PASSWORD_CHANGE} component={LoginContainer} />
-          
-          <Route exact path={ROUTES.HOME} component={HomePage} />
+   
+    
+    <Route exact path={ROUTES.HOME} component={HomePage} />
           <Route
             exact
             path={ROUTES.ACCOUNT}
@@ -59,7 +46,6 @@ const DefaultContainer = () => (
 
         </div>
       
-  </div>
   
 )
 export default withAuthentication(App);
