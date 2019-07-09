@@ -97,7 +97,9 @@ class Landing extends React.Component{
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="carousel-background"><img src="img/intro-carousel/4.webp" alt /></div>
+                  <div className="carousel-background">
+                    <img src="img/intro-carousel/4.webp" alt />
+                    </div>
                   <div className="carousel-container">
                     <div className="carousel-content">
                       <h2>Services</h2>
@@ -151,7 +153,9 @@ class Landing extends React.Component{
                   <div className="about-col">
                     <div className="img">
                       <img src="img/about-plan.jpg" alt className="img-fluid" />
-                      <div className="icon"><i className="ion-ios-list-outline" /></div>
+                      <div className="icon"><i className="ion-ios-list-outline"/>
+                      
+                      </div>
                     </div>
                     <h2 className="title"><a href="#about">Our Plan</a></h2>
                     <p>
@@ -292,7 +296,7 @@ class Landing extends React.Component{
                 <div className="col-lg-4 col-md-6 footer-contact footer-links">
                   <h4>Contact Us</h4>
                   <p>
-                    xyz,xyz<br />
+                    Ahmedabad<br />
                     India<br />
                     <strong>Phone:</strong> +1 5589 55488 55<br />
                     <strong>Email:</strong> girl_power@gmail.com<br />
