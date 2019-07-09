@@ -66,7 +66,7 @@ const config = {
       });
       doSendEmailVerification=()=>
       this.auth.currentUser.sendEmailVerification({
-        url:'https://girl-power.herokuapp.com/home'
+        url:'localhost:3000'
       })
   
     // *** User API ***
