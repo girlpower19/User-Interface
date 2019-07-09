@@ -42,12 +42,10 @@ class Landing extends React.Component{
                       <p>
                         First and foremost because women are amazing, strong, caring, passionate, and loyal problem solvers!
                         “Women in tech” has become a hot topic, and it is an important one. More important is diversity in 
-                        general. Having men AND women, AND people from different backgrounds working in tech and around
-                        innovation is essential to building the best product, growing a company and doing good in general.
+                        general. 
                         Having different backgrounds, mindsets, challenges, privileges, world-views, political 
                         affiliations, fashion choices, and family dynamics around the same table solving a problem is 
-                        a guaranteed formula for success. So, if you want more successful businesses/
-                        tech…have more women and have a diverse group period.
+                        a guaranteed formula for success.
                       </p>
                       <a href="#about" className="btn-get-started scrollto">Get Started !!</a>               
                     </div>
@@ -63,10 +61,7 @@ class Landing extends React.Component{
                         “Women in tech” has become a hot topic, and it is an important one. More important is diversity in 
                         general. Having men AND women, AND people from different backgrounds working in tech and around
                         innovation is essential to building the best product, growing a company and doing good in general.
-                        Having different backgrounds, mindsets, challenges, privileges, world-views, political 
-                        affiliations, fashion choices, and family dynamics around the same table solving a problem is 
-                        a guaranteed formula for success. So, if you want more successful businesses/
-                        tech…have more women and have a diverse group period.
+                        
                       </p>
                     </div>
                   </div>
@@ -78,13 +73,8 @@ class Landing extends React.Component{
                       <h2>Women Graph</h2>
                       <p>
                         Women in technology were especially well-represented. Ratings for the leadership effectiveness of women versus men were the most pronounced
-                        in information technology, where women had a percentile score of 52.1 compared to 42.0 for men. In addition to information technology, 
-                        the largest gaps came in other male-dominated functions like engineering, research and development, legal, product development, and sales.
-                        Females were rated more positively in 12 of the top 16 job functions surveyed.
-                        <br />
-                        Other findings revealed that female leaders were ranked better than male leaders. That held true for leadership effectiveness
-                        by position and top competencies. Note that on survey items for competencies, females scored significantly more positive on 36 of 49
-                        items, compared to two items for men. The remaining survey items were neutral.
+                        in information technology, where women had a percentile score of 52.1 compared to 42.0 for men. 
+                       
                       </p>
                       <a href="#graph" className="btn-get-started scrollto">Graph !! </a>
                     </div>
