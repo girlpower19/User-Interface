@@ -10,6 +10,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import  "./index.css";
+import { AuthUserContext } from '../Session';
+import { Route } from 'react-router-dom'
+
 import {
   MDBContainer,
   MDBRow,
@@ -25,7 +28,18 @@ import {
 const SignUpPage = () => (
   <div>
    <FirebaseContext.Consumer>
-      {firebase => <SignUpForm firebase={firebase} />}
+      {firebase => 
+      <AuthUserContext.Consumer>
+        {
+            authUser=>authUser?<Route render={({history})=>(
+                history.push(ROUTES.LANDING)
+            )}
+            />
+          :<SignUpForm firebase={firebase} />
+            
+        }
+      </AuthUserContext.Consumer>
+      }
     </FirebaseContext.Consumer>
     
    

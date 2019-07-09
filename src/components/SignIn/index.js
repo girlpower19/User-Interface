@@ -5,14 +5,15 @@ import { PasswordForgetLink } from "../PasswordForget";
 import {SignUpLink} from '../SignUp';
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
+import { Route } from 'react-router-dom'
+
 import "./index.css"
 //mdb
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-
+import { AuthUserContext } from '../Session';
 import "./index.css";
-
 import {
   MDBContainer,
   MDBRow,
@@ -26,7 +27,15 @@ import {
 
 const SignInPage = () => (
   <div>
-    <SignInForm />
+<AuthUserContext.Consumer>
+  {
+       authUser=>authUser?<Route render={({history})=>(
+        history.push(ROUTES.LANDING)
+    )}
+    />:<SignInForm />
+      
+  }
+    </AuthUserContext.Consumer>
   </div>
 );
 

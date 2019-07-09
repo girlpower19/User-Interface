@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import { AuthUserContext } from '../Session';
+import SignOutButton from '../SignOut';
+import { Route } from 'react-router-dom'
 
 class Landing extends React.Component{
     render() {
@@ -16,14 +19,27 @@ class Landing extends React.Component{
             <div id="logo" className="pull-left">
               <h1><a href="#intro" className="scrollto">Girl_Power</a></h1>
             </div>
-            <nav id="nav-menu-container">
-              <ul className="nav-menu">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><Link to={ROUTES.SIGN_IN}>Sign In</Link></li>
-                <li className="menu-active"><Link to={ROUTES.SIGN_UP}>Sign Up</Link></li>
-              </ul>
-            </nav>
+            <AuthUserContext.Consumer>
+              {
+                    authuser=>authuser?<nav id="nav-menu-container">
+                    <ul className="nav-menu">
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li>
+                        <Link><SignOutButton/></Link>
+                      </li>
+                    </ul>
+                  </nav>:<nav id="nav-menu-container">
+                    <ul className="nav-menu">
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><Link to={ROUTES.SIGN_IN}>Sign In</Link></li>
+                      <li className="menu-active"><Link to={ROUTES.SIGN_UP}>Sign Up</Link></li>
+                    </ul>
+                  </nav>
+              }
+            
+            </AuthUserContext.Consumer>
             {/* #nav-menu-container */}
           </div>
         </header>
@@ -298,9 +314,11 @@ class Landing extends React.Component{
               © Copyright <strong>Girl_Power</strong>. All Rights Reserved
             </div>
             <div className="credits">
-              Designed by <a target="_blank" href="girl-power.herokuapp.com">Girl Power</a>
+              Designed by Girl_Power              
             </div>
-          </div>
+            
+            </div>
+          
         </footer>
         {/* #footer */}
         {/* back to top */}
@@ -316,4 +334,13 @@ class Landing extends React.Component{
       )   
     }
   };
+  /*const handleRedirect=()=>
+{
+        <Route render=
+                  {({history})=>
+                  (
+                  history.push(ROUTES.APP)
+                  )}
+                  />
+}*/
 export default Landing;

@@ -9,3 +9,4 @@ export const PASSWORD_CHANGE='/pw-change';
 export const ADMIN_DETAILS='/admin/:id';
 export const TANDC='/tandc';
 export const PP='/pp';
+export const APP='girl-power.herokuapp.com;'
