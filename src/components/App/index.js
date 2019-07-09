@@ -11,12 +11,13 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import * as ROUTES from '../../constants/routes';
 import withAuthentication from '../Session/withAuthentication';
+import TandC from '../TermsandConditions';
 const  App=()=>( 
   <div>
     <Router>
     <Switch>
-    <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
-    <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
+    
+	<Route exact path={ROUTES.LANDING} component={LandingPage}/>
     <Route component={DefaultContainer}/>
     </Switch>
     </Router>
@@ -28,14 +29,12 @@ const DefaultContainer = () => (
  
       <div>
      <Navigation/>
+     <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
+    <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
      <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
-    <Route exact path={ROUTES.PASSWORD_CHANGE} component={passwordChange} />
-      <Route
-      exact
-      path={ROUTES.LANDING}
-      component={LandingPage}/>
-   
-    
+		<Route exact path={ROUTES.PASSWORD_CHANGE} component={passwordChange} />
+    <Route exact path={ROUTES.TANDC} component={TandC} />
+
     <Route exact path={ROUTES.HOME} component={HomePage} />
           <Route
             exact

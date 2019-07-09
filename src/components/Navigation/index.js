@@ -77,7 +77,7 @@ class NavigationNonAuth extends Component
   render()
   {
     return(
-      <MDBNavbar color="light-blue" dark expand="md" className="blue-gradient">
+      <MDBNavbar color="light-blue" style={{color:'white'}} dark expand="md" className=" blue-gradient">
       <MDBNavbarToggler onClick={this.toggleCollapse} />
       <MDBNavbarNav left>
       <MDBNavbarBrand>
@@ -94,8 +94,8 @@ class NavigationNonAuth extends Component
           <MDBIcon icon="user" />
         </MDBDropdownToggle>
         <MDBDropdownMenu className="dropdown-default">
-          <MDBDropdownItem href={ROUTES.SIGN_UP}>Register</MDBDropdownItem>
-          <MDBDropdownItem href={ROUTES.SIGN_IN}>Login</MDBDropdownItem>
+          <MDBDropdownItem href={ROUTES.SIGN_UP}>Sign Up</MDBDropdownItem>
+          <MDBDropdownItem href={ROUTES.SIGN_IN}>Sign In</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown>
     </MDBNavItem>
