@@ -66,7 +66,7 @@ const config = {
       });
       doSendEmailVerification=()=>
       this.auth.currentUser.sendEmailVerification({
-        url:'localhost:3000'
+        url:'localhost:3000/home'
       })
   
     // *** User API ***
