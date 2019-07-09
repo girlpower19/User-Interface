@@ -66,7 +66,11 @@ const config = {
       });
       doSendEmailVerification=()=>
       this.auth.currentUser.sendEmailVerification({
+<<<<<<< HEAD
         url:'http://localhost:3000/home'
+=======
+        url:'localhost:3000/home'
+>>>>>>> ce09bf71081e23767ecd4662eeecfba47950bb0b
       })
   
     // *** User API ***
