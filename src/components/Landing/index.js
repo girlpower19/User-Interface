@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
-// import { Route } from 'react-router-dom'
-
 class Landing extends React.Component{
     render() {
       return (
@@ -51,46 +49,47 @@ class Landing extends React.Component{
               <ol className="carousel-indicators" />
               <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active">
-                  <div className="carousel-background"><img src="img/intro-carousel/1.jpeg" alt="" /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/1.jpeg"  alt=""  /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
-                      <h2 >Why Girl_Power ?</h2>
-                      <p > 
-                        First and foremost because women are amazing, strong, caring, passionate, and loyal problem solvers!
+                      <h2>Why Girl_Power ?</h2>
+                      <p>
+                       <i> First and foremost because women are amazing, strong, caring, passionate, and loyal problem solvers!
                         “Women in tech” has become a hot topic, and it is an important one. More important is diversity in 
                         general. 
-                        Having different backgrounds, mindsets, challenges, privileges, world-views, political 
-                        affiliations, fashion choices, and family dynamics around the same table solving a problem is 
-                        a guaranteed formula for success.
+                        </i>
                       </p>
                       <a href="#about" className="btn-get-started scrollto">Get Started !!</a>               
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="carousel-background"><img src="img/intro-carousel/2.jpg" alt="" /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/2.jpg"  alt=""  /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
                       <h2 >Why Only for WOMEN ?</h2>
                       <p>
-                      If we don’t make girls’ rights a priority, we are at risk of failing on Global Goal
-                      - to achieve gender equality and empower all women and girls by 2030. 
-                      The platform aims to increase the visibility of girls’ rights, to be a resource for 
-                      advocates and lawmakers alike. With it, we will build a wider movement in support of girls 
-                      so that they are invisible no more.
+                        <i>Women in tech are facing 
+                          so many issues and having 
+                          problems which they cannot
+                           share with other people. 
+                           Having a plateform only 
+                           for women will allow them
+                          to open and have support.
+                        </i>
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="carousel-background"><img src="img/intro-carousel/3.webp" alt="" /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/3.webp"  alt=""  /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
                       <h2 >Women Graph</h2>
                       <p>
-                        Women in technology were especially well-represented. Ratings for the leadership effectiveness of women versus men were the most pronounced
+                       <i> Women in technology were especially well-represented. Ratings for the leadership effectiveness of women versus men were the most pronounced
                         in information technology, where women had a percentile score of 52.1 compared to 42.0 for men. 
-                       
+                       </i>
                       </p>
                       <a href="#graph" className="btn-get-started scrollto">Graph !! </a>
                     </div>
@@ -98,18 +97,21 @@ class Landing extends React.Component{
                 </div>
                 <div className="carousel-item">
                   <div className="carousel-background">
-                    <img src="img/intro-carousel/4.webp" alt="" />
+                    <img src="img/intro-carousel/4.webp" alt=""   />
                     </div>
                   <div className="carousel-container">
                     <div className="carousel-content">
                       <h2 >Services</h2>
                       <p>
-                        Girl_Power provides a variety of communications, marketing communications and public relations services. We work closely with 
-                        you and your team to develop and help execute plans, programs and projects utilizing in-house expertise, as well as external
-                        resources by proviing vrious kind of tech Ted-Talks, Issues,and News for women awarenss for randing companies,competetions
+                      <i> Girl_Power provides a variety of communications, 
+                        We work closely with 
+                       providing various kind of tech Ted-Talks,
+                         Issues,and News for women awareness for  companies,
+                         competetions
                         and other technology awareness purpose.
+                      </i>
                       </p>
-                      <a href="#services" className="btn-get-started scrollto">Services ..</a>
+                      <a href="#services" className="btn-get-started scrollto">Services</a>
                     </div>
                   </div>
                 </div>
@@ -135,24 +137,32 @@ class Landing extends React.Component{
                 <p>
                   Women Empowering Nations is a nonprofit organization with a mission to provide exposure and mentorship
                   for girls of color in underserved communities to develop them into socially conscious global leaders.   
+                
                 </p></header>
               <div className="row about-cols">
                 <div className="col-md-4 wow fadeInUp">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-mission.jpg" alt="" className="img-fluid" />
+                      <img src="img/about-mission.jpg" alt=""   className="img-fluid" />
                       <div className="icon"><i className="ion-ios-speedometer-outline" /></div>
                     </div>
                     <h2 className="title"><a href="#about">Our Mission</a></h2>
                     <p>
-                      Promoting social and economic empowerment of women through cross-cuting policies and programmes, mainstreaming gender concerns, creating awareness about their rights and facilitating institutional and legislative support for enabling them realize their human rights and develop to their full potential
+                      
+                        Promoting social and economic empowerment of women through cross-cuting policies and programmes, 
+                        mainstreaming gender concerns, 
+                        creating awareness about their
+                         rights and facilitating institutional 
+                         and legislative support for enabling 
+                         them realize their human rights and develop to their full
+                          potential
                     </p>
                   </div>
                 </div>
                 <div className="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-plan.jpg" alt="" className="img-fluid" />
+                      <img src="img/about-plan.jpg" alt=""  className="img-fluid" />
                       <div className="icon"><i className="ion-ios-list-outline"/>
                       
                       </div>
@@ -168,7 +178,7 @@ class Landing extends React.Component{
                 <div className="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-vision.jpg" alt="" className="img-fluid" />
+                      <img src="img/about-vision.jpg"  alt=""  className="img-fluid" />
                       <div className="icon"><i className="ion-ios-eye-outline" /></div>
                     </div>
                     <h2 className="title"><a href="#about">Our Vision</a></h2>
@@ -177,6 +187,7 @@ class Landing extends React.Component{
                       Empowered women living with dignity and contributing as equal partners in development in an 
                       environment free from violence and discrimination. And, wellnurtured children with full
                       opportunities for growth and development in a safe and protective environment.
+                      
                     </p>
                   </div>
                 </div>
@@ -198,16 +209,16 @@ class Landing extends React.Component{
               </header>
               <div className="row about-cols">
                 <div className="col-md-6   about-col img">
-                  <img src="img/graph/1.png" alt="" className="img-fluid" /> 
+                  <img src="img/graph/1.png"  alt=""  className="img-fluid" /> 
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/3.png" alt="" className="img-fluid" />
+                  <img src="img/graph/3.png"  alt=""  className="img-fluid" />
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/3.png" alt="" className="img-fluid" />    
+                  <img src="img/graph/3.png"   alt="" className="img-fluid" />    
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/4.png" alt="" className="img-fluid" />         
+                  <img src="img/graph/4.png"  alt=""  className="img-fluid" />         
                 </div>
               </div>
             </div>
@@ -283,11 +294,11 @@ class Landing extends React.Component{
                 <div className="col-lg-4 col-md-6 footer-links">
                   <h4>Useful Links</h4>
                   <ul>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Home</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#">Home</a></li>
                     <li><i className="ion-ios-arrow-right" /> <a href="#about">About us</a></li>
                     <li><i className="ion-ios-arrow-right" /> <a href="#services">Services</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Terms and Conditions</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Privacy policy</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#tandc">Terms and Conditions</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#privacy">Privacy policy</a></li>
                   </ul>
                 </div>
                 <div className="col-lg-1 col-md-6 ">
