@@ -121,7 +121,7 @@ const INITIAL_STATE = {
         email,
         passwordOne,
         passwordTwo,
-        isAdmin,
+        
         error,
       } = this.state;
   
@@ -185,17 +185,13 @@ const INITIAL_STATE = {
             label="Confirm password"
                 icon="lock"
           />
-          <center>Are You Admin ??</center>
+         {/*<center>Are You Admin ??</center>
             <MDBInput
-              
-              
               name="isAdmin"
               type="checkbox"
               checked={isAdmin}
-              
               onChange={this.onChangeCheckbox}
-              
-            />
+         />*/}
         
           </div>
           <br/>
@@ -267,7 +263,7 @@ const INITIAL_STATE = {
             label="Confirm password"
                 icon="lock"
           />
-         <center><b>Are You Admin ??</b></center>
+         {/*<center><b>Are You Admin ??</b></center>
             <MDBInput
               
               
@@ -276,10 +272,9 @@ const INITIAL_STATE = {
               checked={isAdmin}
               onChange={this.onChangeCheckbox}
               
-            />
-        <br/>
+         />*/}
           </div>
-          <br/>
+          
           <div className="text-center">
               <MDBBtn color="primary" disabled={isInvalid} type="submit" >SignUp</MDBBtn>
             </div>
