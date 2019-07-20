@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 
 class Landing extends React.Component{
     render() {
@@ -51,11 +51,11 @@ class Landing extends React.Component{
               <ol className="carousel-indicators" />
               <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active">
-                  <div className="carousel-background"><img src="img/intro-carousel/1.jpeg" alt /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/1.jpeg" alt="" /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
-                      <h2>Why Girl_Power ?</h2>
-                      <p>
+                      <h2 >Why Girl_Power ?</h2>
+                      <p > 
                         First and foremost because women are amazing, strong, caring, passionate, and loyal problem solvers!
                         “Women in tech” has become a hot topic, and it is an important one. More important is diversity in 
                         general. 
@@ -68,25 +68,25 @@ class Landing extends React.Component{
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="carousel-background"><img src="img/intro-carousel/2.jpg" alt /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/2.jpg" alt="" /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
-                      <h2>Why Only for WOMEN ?</h2>
+                      <h2 >Why Only for WOMEN ?</h2>
                       <p>
-                        First and foremost because women are amazing, strong, caring, passionate, and loyal problem solvers!
-                        “Women in tech” has become a hot topic, and it is an important one. More important is diversity in 
-                        general. Having men AND women, AND people from different backgrounds working in tech and around
-                        innovation is essential to building the best product, growing a company and doing good in general.
-                        
+                      If we don’t make girls’ rights a priority, we are at risk of failing on Global Goal
+                      - to achieve gender equality and empower all women and girls by 2030. 
+                      The platform aims to increase the visibility of girls’ rights, to be a resource for 
+                      advocates and lawmakers alike. With it, we will build a wider movement in support of girls 
+                      so that they are invisible no more.
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="carousel-background"><img src="img/intro-carousel/3.webp" alt /></div>
+                  <div className="carousel-background"><img src="img/intro-carousel/3.webp" alt="" /></div>
                   <div className="carousel-container">
                     <div className="carousel-content">
-                      <h2>Women Graph</h2>
+                      <h2 >Women Graph</h2>
                       <p>
                         Women in technology were especially well-represented. Ratings for the leadership effectiveness of women versus men were the most pronounced
                         in information technology, where women had a percentile score of 52.1 compared to 42.0 for men. 
@@ -98,11 +98,11 @@ class Landing extends React.Component{
                 </div>
                 <div className="carousel-item">
                   <div className="carousel-background">
-                    <img src="img/intro-carousel/4.webp" alt />
+                    <img src="img/intro-carousel/4.webp" alt="" />
                     </div>
                   <div className="carousel-container">
                     <div className="carousel-content">
-                      <h2>Services</h2>
+                      <h2 >Services</h2>
                       <p>
                         Girl_Power provides a variety of communications, marketing communications and public relations services. We work closely with 
                         you and your team to develop and help execute plans, programs and projects utilizing in-house expertise, as well as external
@@ -140,7 +140,7 @@ class Landing extends React.Component{
                 <div className="col-md-4 wow fadeInUp">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-mission.jpg" alt className="img-fluid" />
+                      <img src="img/about-mission.jpg" alt="" className="img-fluid" />
                       <div className="icon"><i className="ion-ios-speedometer-outline" /></div>
                     </div>
                     <h2 className="title"><a href="#about">Our Mission</a></h2>
@@ -152,7 +152,7 @@ class Landing extends React.Component{
                 <div className="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-plan.jpg" alt className="img-fluid" />
+                      <img src="img/about-plan.jpg" alt="" className="img-fluid" />
                       <div className="icon"><i className="ion-ios-list-outline"/>
                       
                       </div>
@@ -168,7 +168,7 @@ class Landing extends React.Component{
                 <div className="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
                   <div className="about-col">
                     <div className="img">
-                      <img src="img/about-vision.jpg" alt className="img-fluid" />
+                      <img src="img/about-vision.jpg" alt="" className="img-fluid" />
                       <div className="icon"><i className="ion-ios-eye-outline" /></div>
                     </div>
                     <h2 className="title"><a href="#about">Our Vision</a></h2>
@@ -198,16 +198,16 @@ class Landing extends React.Component{
               </header>
               <div className="row about-cols">
                 <div className="col-md-6   about-col img">
-                  <img src="img/graph/1.png" alt className="img-fluid" /> 
+                  <img src="img/graph/1.png" alt="" className="img-fluid" /> 
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/3.png" alt className="img-fluid" />
+                  <img src="img/graph/3.png" alt="" className="img-fluid" />
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/3.png" alt className="img-fluid" />    
+                  <img src="img/graph/3.png" alt="" className="img-fluid" />    
                 </div>
                 <div className="col-md-6  about-col img">
-                  <img src="img/graph/4.png" alt className="img-fluid" />         
+                  <img src="img/graph/4.png" alt="" className="img-fluid" />         
                 </div>
               </div>
             </div>
@@ -271,7 +271,6 @@ class Landing extends React.Component{
                 <div className="col-lg-3 col-md-6 footer-info">
                   <h3>Girl_Power</h3>
                   <p>
-                    {/* "If you educate a man, you educate a family and a village. <br />To educate a woman, you empower a nation." */}
                     "Here's to strong women.
                     <br />
                     May we know them.
@@ -284,11 +283,11 @@ class Landing extends React.Component{
                 <div className="col-lg-4 col-md-6 footer-links">
                   <h4>Useful Links</h4>
                   <ul>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#">Home</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#">About us</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#">Services</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#">Terms and Conditions</a></li>
-                    <li><i className="ion-ios-arrow-right" /> <a href="#">Privacy policy</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Home</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#about">About us</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#services">Services</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Terms and Conditions</a></li>
+                    <li><i className="ion-ios-arrow-right" /> <a href="#intro">Privacy policy</a></li>
                   </ul>
                 </div>
                 <div className="col-lg-1 col-md-6 ">
@@ -304,11 +303,6 @@ class Landing extends React.Component{
                     <li><i className="ion-ios-arrow-right" /> <a href="#team">Our Team</a></li>
                   </ul>
                   <p />
-                  <div className="social-links">
-                    {/*<a href="#" className="twitter"><i className="fa fa-twitter" /></a>
-                    <a href="#" className="facebook"><i className="fa fa-facebook" /></a>
-      <a href="#" className="linkedin"><i className="fa fa-linkedin" /></a>*/}
-                  </div>
                 </div>
               </div>
             </div>
@@ -326,25 +320,22 @@ class Landing extends React.Component{
         </footer>
         {/* #footer */}
         {/* back to top */}
-        <a href="#" className="back-to-top"><i className="fa fa-chevron-up" /></a>
+        {/* <a href="#" className="back-to-top"><i className="fa fa-chevron-up" /></a> */}
         {/* JavaScript Libraries */}
         {/* Contact Form JavaScript File */}
         {/*  */}
         {/*  Main Javascript File */}
       </div>
-   
-     
-   
       )   
     }
   };
-  /*const handleRedirect=()=>
-{
-        <Route render=
-                  {({history})=>
-                  (
-                  history.push(ROUTES.APP)
-                  )}
-                  />
-}*/
+//   /*const handleRedirect=()=>
+// {
+//         <Route render=
+//                   {({history})=>
+//                   (
+//                   history.push(ROUTES.APP)
+//                   )}
+//                   />
+// }*/
 export default Landing;
